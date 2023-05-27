@@ -23,6 +23,7 @@
 		101C57292A1117720091E8F0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C57282A1117720091E8F0 /* HomeView.swift */; };
 		101C572B2A1117830091E8F0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C572A2A1117830091E8F0 /* HomeViewModel.swift */; };
 		101C572F2A112E2E0091E8F0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101C572E2A112E2E0091E8F0 /* SettingView.swift */; };
+		10390E0E2A2277300050B7DE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10390E0D2A2277300050B7DE /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		101C57282A1117720091E8F0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		101C572A2A1117830091E8F0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		101C572E2A112E2E0091E8F0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		10390E0D2A2277300050B7DE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				101C57242A1117520091E8F0 /* Home */,
+				10390E0C2A2277140050B7DE /* Search */,
 				101C572C2A112DFB0091E8F0 /* Setting */,
 			);
 			path = TabbarItems;
@@ -285,6 +288,14 @@
 				101C572E2A112E2E0091E8F0 /* SettingView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		10390E0C2A2277140050B7DE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				10390E0D2A2277300050B7DE /* SearchView.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +378,7 @@
 				101C57132A10F1400091E8F0 /* SignupViewModel.swift in Sources */,
 				101C57162A10F2210091E8F0 /* AddUsernameView.swift in Sources */,
 				101C572B2A1117830091E8F0 /* HomeViewModel.swift in Sources */,
+				10390E0E2A2277300050B7DE /* SearchView.swift in Sources */,
 				101C56F62A10B6480091E8F0 /* ContentView.swift in Sources */,
 				101C57292A1117720091E8F0 /* HomeView.swift in Sources */,
 				101C56F42A10B6480091E8F0 /* Insta_cloneApp.swift in Sources */,

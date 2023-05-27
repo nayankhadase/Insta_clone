@@ -18,7 +18,7 @@ struct MainTabBarView: View {
                 }
                 .tag(1)
             
-            Text("Tab Content 2")
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }
@@ -42,6 +42,7 @@ struct MainTabBarView: View {
                 }
                 .tag(5)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

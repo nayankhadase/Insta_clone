@@ -58,7 +58,7 @@ struct TopNavBarView: View{
                 }
             }
             .padding(.horizontal)
-            .background()
+            .background(.white)
             .shadow(color: .black.opacity(0.2),radius: 1, x:1,y:1)
         }
     }
@@ -88,7 +88,7 @@ struct StatusView: View{
     
     var body: some View{
         ScrollView(.horizontal, showsIndicators: false){
-            HStack(spacing: 20){
+            HStack(spacing: 5){
                 VStack{
                     Image("user1")
                         .resizable()
@@ -114,7 +114,7 @@ struct StatusView: View{
                         
                         Text("name")
                         .foregroundColor(.secondary)
-                        .font(.callout)
+                        .font(.caption)
                 }
                 
                 ForEach(2..<10) { i in

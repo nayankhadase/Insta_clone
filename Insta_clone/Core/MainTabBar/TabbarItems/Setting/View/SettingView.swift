@@ -110,9 +110,9 @@ struct UserInfoView: View{
                 }
                 HStack{
                     VStack(alignment: .leading){
-                        Text("quality 1")
-                        Text("quality 1")
-                        Text("quality 1")
+                        Text("Music 🎤")
+                        Text("Sport 🏄🏻‍♂️")
+                        Text("Study 📚")
                     }
                     .foregroundColor(.secondary)
                     Spacer()
@@ -121,18 +121,22 @@ struct UserInfoView: View{
                     Button {
                         //code
                     } label: {
+                        Spacer()
                         Text("Edit profile")
                             .padding(.horizontal)
                             .foregroundColor(.primary)
+                        Spacer()
                     }
                     .buttonStyle(.bordered)
                     
                     Button {
                         //code
                     } label: {
+                        Spacer()
                         Text("Share profile")
                             .padding(.horizontal)
                             .foregroundColor(.primary)
+                        Spacer()
                     }
                     .buttonStyle(.bordered)
                     
@@ -158,9 +162,9 @@ struct HighlightView: View{
     var body: some View{
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 20){
-                ForEach(1..<10) { i in
+                ForEach(1..<20) { i in
                     VStack{
-                        Image("user\(i)")
+                        Image("user\(i % 10 + 1)")
                             .resizable()
                             .scaledToFill()
                             .frame(width: geo.size.width*0.2)
@@ -188,7 +192,7 @@ struct MyUploadItemsView: View{
     @State private var selectedSegment = "square.grid.3x3"
     @Namespace var namespace2
     
-    let column: [GridItem] = [GridItem(.adaptive(minimum: 100, maximum: 150))]
+    let column: [GridItem] = [GridItem(),GridItem(),GridItem()]
     
     var body: some View{
         VStack{
@@ -200,7 +204,7 @@ struct MyUploadItemsView: View{
                     Image(systemName: item)
                         .foregroundColor(selectedSegment == item ? .primary : .primary.opacity(0.3) )
                         .frame(maxWidth: .infinity)
-                        .frame(height: 30)
+                        .frame(height: geo.size.width * 0.1)
                         .onTapGesture {
                             withAnimation(.spring()){
                                 selectedSegment = item
@@ -219,11 +223,11 @@ struct MyUploadItemsView: View{
             }
             
             LazyVGrid(columns: column) {
-                ForEach(1..<12) { i in
-                    Image("user\(i)")
+                ForEach(1..<20) { i in
+                    Image("user\(i % 10 + 1)")
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 120, height: 120)
+                        .frame(width: geo.size.width * 0.32, height: geo.size.width * 0.32)
                         .clipShape(RoundedRectangle(cornerRadius: 1))
                 }
             }
