@@ -59,7 +59,7 @@ struct TopNavBarView: View{
             }
             .padding(.horizontal)
             .background(.white)
-            .shadow(color: .black.opacity(0.2),radius: 1, x:1,y:1)
+//            .shadow(color: .black.opacity(0.2),radius: 1, x:1,y:1)
         }
     }
 }
@@ -85,6 +85,7 @@ struct FeedView: View{
 
 struct StatusView: View{
     let geo: GeometryProxy
+    let nameArray = ["ad_raj", "loki_god", "spider", "thor","shaktiman"]
     
     var body: some View{
         ScrollView(.horizontal, showsIndicators: false){
@@ -129,7 +130,7 @@ struct StatusView: View{
                                 Circle()
                                     .stroke(LinearGradient(colors: [.red,.orange,.red,.pink], startPoint: .leading, endPoint: .trailing), lineWidth: 2)
                             }
-                            Text("name")
+                        Text(nameArray[i % nameArray.count])
                             .foregroundColor(.secondary)
                             .font(.callout)
                     }

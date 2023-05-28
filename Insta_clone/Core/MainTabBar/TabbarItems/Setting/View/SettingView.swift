@@ -121,22 +121,22 @@ struct UserInfoView: View{
                     Button {
                         //code
                     } label: {
-                        Spacer()
                         Text("Edit profile")
                             .padding(.horizontal)
                             .foregroundColor(.primary)
-                        Spacer()
+                            .frame(maxWidth: .infinity)
+                        
                     }
                     .buttonStyle(.bordered)
                     
                     Button {
                         //code
                     } label: {
-                        Spacer()
                         Text("Share profile")
                             .padding(.horizontal)
                             .foregroundColor(.primary)
-                        Spacer()
+                            .frame(maxWidth: .infinity)
+                        
                     }
                     .buttonStyle(.bordered)
                     
@@ -144,10 +144,10 @@ struct UserInfoView: View{
                         //code
                     } label: {
                         Image(systemName: "person.fill.badge.plus")
-                            
                             .foregroundColor(.primary)
                     }
                     .buttonStyle(.bordered)
+                    
 
                 }
             }
@@ -158,6 +158,7 @@ struct UserInfoView: View{
 
 struct HighlightView: View{
     let geo: GeometryProxy
+    let nameArray = ["Happy", "Awesome", "🥰", "Chill","👨‍👩‍👧"]
     
     var body: some View{
         ScrollView(.horizontal, showsIndicators: false){
@@ -175,7 +176,7 @@ struct HighlightView: View{
                                     .stroke(.gray)
                             }
                         
-                        Text("🙈")
+                        Text(nameArray[i % nameArray.count])
                             .foregroundColor(.secondary)
                     }
                 }

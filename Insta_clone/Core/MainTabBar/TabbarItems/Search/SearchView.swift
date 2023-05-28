@@ -91,6 +91,7 @@ struct SearchSuggestions: View{
     let geo: GeometryProxy
     
     let arr = ["mahi reel", "sport", "nature", "adventure", "thrill"]
+    let nameArray = ["ad_raj", "loki_god", "spider", "thor","shaktiman"]
     
     var body: some View{
         VStack{
@@ -138,7 +139,7 @@ struct SearchSuggestions: View{
                                 .clipShape(Circle())
                             
                             VStack(alignment: .leading){
-                                Text("search_name")
+                                Text(nameArray[i % nameArray.count])
                                     .font(.callout)
                                 Text("description")
                                     .font(.caption)

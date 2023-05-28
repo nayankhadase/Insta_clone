@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainTabBarView: View {
-    @State var selectedTag = 1
+    @State var selectedTag = "1"
     
     var body: some View {
         TabView(selection: $selectedTag) {
@@ -16,32 +16,39 @@ struct MainTabBarView: View {
                 .tabItem {
                     Image(systemName: "house")
                 }
-                .tag(1)
+                .tag("1")
+                .transition(.slide)
             
             SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }
-                .tag(2)
+                .tag("2")
+                .transition(.slide)
             
             Text("Tab Content 3")
                 .tabItem {
                     Image(systemName: "plus.app")
                 }
-                .tag(3)
+                .tag("3")
+                .transition(.slide)
             
-            Text("Tab Content 4")
+            ReelsView(tag: $selectedTag)
                 .tabItem {
                     Image(systemName: "play.square")
                 }
-                .tag(4)
+                .tag("4")
+                .transition(.slide)
             
             SettingView()
                 .tabItem {
                     Image(systemName: "person.circle")
                 }
-                .tag(5)
+                .tag("5")
+                .transition(.slide)
         }
+//        .animation(.easeInOut, value: selectedTag)
+//        .transition(.slide)
         .navigationBarBackButtonHidden(true)
     }
 }
