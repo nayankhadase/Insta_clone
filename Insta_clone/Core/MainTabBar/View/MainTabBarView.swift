@@ -26,6 +26,7 @@ struct MainTabBarView: View {
                 .tag("2")
                 .transition(.slide)
             
+            //https://betterprogramming.pub/how-to-pick-an-image-from-camera-or-photo-library-in-swiftui-a596a0a2ece
             Text("Tab Content 3")
                 .tabItem {
                     Image(systemName: "plus.app")

@@ -73,8 +73,8 @@ struct FeedView: View{
                 StatusView(geo: geo)
                 
                 LazyVStack{
-                    ForEach(0...10, id: \.self){ _ in
-                        FeedCardView(geo: geo)
+                    ForEach(1...10, id: \.self){ i in
+                        FeedCardView(geo: geo, item: i)
                     }
                 }
             }
@@ -151,11 +151,13 @@ struct HomeView_Previews: PreviewProvider {
 
 struct FeedCardView: View {
     let geo: GeometryProxy
+    let item: Int
+    @State private var isLike = false
     
     var body: some View {
         VStack{
             HStack{
-                Image("user1")
+                Image("user\(item % 10 + 1)")
                     .resizable()
                     .scaledToFit()
                     .frame(width: geo.size.width * 0.1)
@@ -182,20 +184,20 @@ struct FeedCardView: View {
             }
             .padding(.horizontal, 5)
             
-            Image("img1")
+            Image("img\(item % 5 + 1)")
                 .resizable()
                 .scaledToFit()
             //                    .frame(width: geo.size.width)
             
             HStack(spacing: 15){
                 Button {
-                    //code
+                    isLike.toggle()
                 } label: {
-                    Image(systemName: "heart")
+                    Image(systemName: isLike ? "heart.fill" : "heart")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 20)
-                        .foregroundColor(.primary)
+                        .foregroundColor(isLike ? .red : .primary)
                 }
                 
                 Button {

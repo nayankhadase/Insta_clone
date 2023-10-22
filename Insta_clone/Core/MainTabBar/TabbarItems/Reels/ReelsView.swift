@@ -235,7 +235,7 @@ struct ReelView: View{
         }
     }
 }
-
+// not in use
 struct ReelsView1: View{
     let geo: GeometryProxy
     var body: some View{

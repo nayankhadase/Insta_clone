@@ -47,11 +47,6 @@ class Coordinator: NSObject{
         parent.player?.seek(to: .zero)
     }
     
-    
-//    @objc
-//        func playerItemDidReachEnd(notification: Notification) {
-//            playerLayer.player?.seek(to: CMTime.zero)
-//        }
 }
 
 

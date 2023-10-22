@@ -181,9 +181,10 @@ struct HighlightView: View{
                     }
                 }
             }
+            .padding(.vertical)
             .padding(.leading)
         }
-        .padding(.vertical)
+        
     }
 }
 
